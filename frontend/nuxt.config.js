@@ -34,7 +34,16 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+  auth: {
+    strategies: {
+      google: {
+        clientId: 'to be added'
+      },
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
