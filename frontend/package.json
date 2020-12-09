@@ -1,0 +1,19 @@
+{
+  "name": "google-login",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth-next": "^5.0.0-1607335658.590bfae",
+    "@nuxtjs/axios": "^5.12.3",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "nuxt-buefy": "^0.4.3"
+  },
+  "devDependencies": {}
+}
