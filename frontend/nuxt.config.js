@@ -40,8 +40,8 @@ export default {
   auth: {
     strategies: {
       google: {
-        clientId: "to be added",
-        codeChallengeMethod: "",
+        clientId: process.env.GOOGLE_SOCIAL_LOGIN_CLIENT_ID,
+        codeChallengeMethod: '',
         responseType: 'code',
         endpoints: {
           token: 'localhost:8000/social/google/token',
