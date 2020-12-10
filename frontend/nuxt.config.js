@@ -40,7 +40,14 @@ export default {
   auth: {
     strategies: {
       google: {
-        clientId: 'to be added'
+        clientId: "to be added",
+        codeChallengeMethod: "",
+        responseType: 'code',
+        endpoints: {
+          token: 'localhost:8000/social/google/token',
+          userInfo: 'localhost:8000/auth/user/'
+        },
+
       },
     }
   },
