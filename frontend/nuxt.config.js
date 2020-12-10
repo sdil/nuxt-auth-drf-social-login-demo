@@ -44,8 +44,8 @@ export default {
         codeChallengeMethod: '',
         responseType: 'code',
         endpoints: {
-          token: 'localhost:8000/social/google/token',
-          userInfo: 'localhost:8000/auth/user/'
+          token: 'http://localhost:8000/social-login/google/',
+          userInfo: 'http://localhost:8000/auth/user/'
         },
 
       },

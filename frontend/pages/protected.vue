@@ -7,9 +7,13 @@
 <script>
 
 export default {
-  middleware: 'auth'
+  middleware: 'auth',
+  methods: {
+    logout() {
+      this.$auth.logout();
+    },
+  },
 };
 
 </script>
-
 
