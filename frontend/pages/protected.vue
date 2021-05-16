@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-      {{ $auth.user.email }}
+      {{ user }}
   </section>
 </template>
 
@@ -8,6 +8,15 @@
 
 export default {
   middleware: 'auth',
+  async fetch() {
+    this.user = await this.$axios.get("http://localhost:8000/auth/user/")
+    console.log(this.user)
+  },
+  data() {
+    return {
+      user: null
+    }
+  },
   methods: {
     logout() {
       this.$auth.logout();

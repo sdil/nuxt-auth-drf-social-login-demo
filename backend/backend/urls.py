@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from social_login.views import GoogleLogin
+from social_login.views import google_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('dj_rest_auth.urls')),
-    path('social-login/google/', GoogleLogin.as_view(), name='google_login'),
+    path('social-login/google/', google_token, name='google_login'),
 ]

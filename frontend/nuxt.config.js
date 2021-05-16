@@ -41,15 +41,21 @@ export default {
     strategies: {
       google: {
         clientId: process.env.GOOGLE_SOCIAL_LOGIN_CLIENT_ID,
-        codeChallengeMethod: '',
+        codeChallengeMethod: "",
         responseType: 'code',
         endpoints: {
-          token: 'http://localhost:8000/social-login/google/',
-          userInfo: 'http://localhost:8000/auth/user/'
+          token: `${process.env.API_SERVER_URL}/social-login/google/`,
+          userInfo: `${process.env.API_SERVER_URL}/auth/user/`,
         },
-
       },
-    }
+    },
+    cookie: {
+      options: {
+        secure: process.env.NODE_ENV === "production", // Enable in Prod only!
+        sameSite: 'lax',
+      }
+    },
+    localStorage: false
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
